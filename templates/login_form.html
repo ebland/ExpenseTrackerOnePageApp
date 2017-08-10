@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+    {% block content_header %}
+  {% include "content_header.html" %} 
+{% endblock content_header %}
+ 
+{% block content %}
+
+<div class="modal-body" align="left"> 
+    <div class="form-group"> 
+        <form action='/login_process' id='login_form' method='POST'>
+            <label for="email">Username/Email</label>
+            <input type='email' name='email' required>      
+    </div>
+    <div class="form-group"> 
+            <label for="password">Password</label>
+            <p><input type='password' name='password' required></p>
+    </div>
+            <button type="submit" value='Log In' class="btn btn-default">Login</button>
+    </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

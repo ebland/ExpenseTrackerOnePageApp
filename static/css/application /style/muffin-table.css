@@ -1,0 +1,356 @@
+
+/* tables */
+
+.muffin.table {
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+}
+
+.muffin.table tbody tr.success td {
+  background-color: #83f87e;
+}
+.muffin.table tbody tr.error td {
+  background-color: #f87e7e;
+}
+.muffin.table tbody tr.warning td {
+  background-color: #f8f57e;
+}
+.muffin.table tbody tr.info td {
+  background-color: #7ec4f8;
+}
+.muffin.table-hover tbody tr.success:hover td {
+  background-color: #5af654;
+}
+.muffin.table-hover tbody tr.error:hover td {
+  background-color: #f65454;
+}
+.muffin.table-hover tbody tr.warning:hover td {
+  background-color: #f6f254;
+}
+.muffin.table-hover tbody tr.info:hover td {
+  background-color: #54b0f6;
+}
+
+.muffin.table-bordered {	
+	-webkit-border-radius: 0px;
+  	-moz-border-radius: 0px;
+  	border-radius: 0px;
+  
+	border-right: 1px dashed #dddddd;
+}
+
+.muffin.table-bordered th,
+.muffin.table-bordered td {
+  border-left: 1px dashed #dddddd;
+}
+
+.muffin.table th {
+  background-color: #f0f0f0;
+  font-weight: 300;
+}
+
+.muffin.table th>a {
+	color: #444444;
+}
+
+.muffin.table-condensed{
+	font-size: small;
+}
+
+
+
+
+
+tr.lighter{
+	background-color: white;
+}
+
+tr.darker{
+	background-color: #f9f9f9;
+}
+
+
+
+/* forms */
+
+textarea.minih{
+  margin-bottom: 0px;
+  line-height: 14px;
+}
+
+input[type="text"].minih{
+  margin-bottom: 0px;
+  line-height: 14px;
+  height: 14px;
+}
+
+select.minih{
+  margin-bottom: 0px;
+  line-height: 14px;
+  height: 22px;
+}
+
+select[multiple="multiple"].minih{
+  height: auto;
+}
+
+select.minih option{
+  margin-bottom: 0px;
+  line-height: 14px;
+  height: 14px;
+}
+
+.form-nomargin
+{
+	display: inline;
+}
+
+
+
+/* layout */
+
+table.layout{
+	width: 100%;
+}
+
+table.layout > tbody > tr > td,
+table.layout-condensed > tbody > tr > td{
+	padding: 0px;
+}
+
+.r1{
+	width: 100%;
+}
+
+.r2{
+	width: 50%;
+}
+
+.r3{
+	width: 33%;
+}
+
+.r4{
+	width: 25%;
+}
+
+.r5{
+	width: 20%;
+}
+
+.r6
+{
+	width: 16.7%;
+}
+
+.ramax{
+	width: 95%;
+}
+
+
+
+/* muffin table */
+
+.table-head,
+.table-foot{
+	padding: 10px;	
+}
+.muffin.table-head,
+.muffin.table-foot{
+	background-color: #f5f5f5;
+	background-image: url('../design/tableh2.png');	
+}
+
+.table-search{
+	margin-bottom: 10px;	
+	padding-bottom: 10px;
+}
+.muffin.table-search{
+	border-bottom: 1px solid #dddddd;
+}
+
+.table-results{
+	margin-top: 2px;
+	background-color: #dddddd;
+	padding: 10px;
+	background-image: url('../design/tableh2.png');	
+	border-top: 1px dashed #dddddd;	
+}
+
+.table-search-opt{	
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+
+.label-90 {
+	width: 90px;
+	text-align: center;
+}
+
+.muffin.label-info,
+.muffin.badge-info {
+  background-color: #54b0f6;
+}
+
+.muffin.label-success,
+.muffin.badge-success {
+  background-color: #5af654;
+}
+
+.muffin.label-warning,
+.muffin.badge-warning {
+  background-color: #f6ba54;
+}
+
+.muffin.label-important,
+.muffin.badge-important {
+  background-color: #f65454;
+}
+
+.muffin.label {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  
+  text-shadow: none;
+}
+
+/* other */
+
+.ibox-hero{
+	background-color: #f8f8f8;
+	background-image: url('../design/tableh2.png');
+	padding: 1px;
+	border: 1px solid white;
+	margin: 1px;	
+	
+	box-shadow: inset 0 0 3px 0px #cccccc;
+	-moz-box-shadow: inset 0 0 3px 0px #cccccc;
+	-webkit-box-shadow: inset 0 0 3px 0px #cccccc;
+}
+
+.icon-rpos{
+	margin-top: 3px;
+	margin-right: 4px;
+}
+
+.margin-left{
+	margin-left: 10px;
+}
+
+.margin-bottom0{
+	margin-bottom: 0px;
+}
+
+.margin-right{
+	margin-right: 10px;
+}
+
+.padding-10 {
+	padding: 10px;
+}
+
+i.muffin{
+	opacity: 0.75;
+}
+
+.tra{
+	opacity: 0.5;
+}
+
+/* alert */
+
+.muffin.alert{
+	-webkit-border-radius: 0px;
+  	-moz-border-radius: 0px;
+  	border-radius: 0px;
+  	
+  	color: #444444;
+  	background-color: #f8f57e;
+  	margin-bottom: 0px;
+  	
+  	background-image: url('../design/alert.png');
+  	
+  	border-bottom-width: 1px;
+	border-bottom-color: #d2d2d2;
+	border-bottom-style: dotted;
+}
+
+.muffin.alert-success{
+	background-image: url('../design/alert-success.png');
+	background-color: #83f87e;
+}
+
+.muffin.alert-error{
+	background-image: url('../design/alert-error.png');
+	background-color: #f87e7e;
+}
+
+.muffin.alert-info{
+	background-image: url('../design/alert-info.png');
+	background-color: #7ec4f8;
+}
+
+.muffin.alert-header
+{
+	border-left-width: 1px;
+	border-left-color: #d2d2d2;
+	border-left-style: dotted;
+
+	border-right-width: 1px;
+	border-right-color: #d2d2d2;
+	border-right-style: dotted;
+	
+	border-top-width: 1px;
+	border-top-color: #d2d2d2;
+	border-top-style: dotted;
+	
+	margin-bottom: 22px;
+}
+
+.muffin.table-bordered thead:first-child tr:first-child th:first-child,
+.muffin.table-bordered tbody:first-child tr:first-child td:first-child {
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+}
+.muffin.table-bordered thead:first-child tr:first-child th:last-child,
+.muffin.table-bordered tbody:first-child tr:first-child td:last-child {
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+  -moz-border-radius-topright: 0;
+}
+.muffin.table-bordered thead:last-child tr:last-child th:first-child,
+.muffin.table-bordered tbody:last-child tr:last-child td:first-child,
+.muffin.table-bordered tfoot:last-child tr:last-child td:first-child {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+}
+.muffin.table-bordered thead:last-child tr:last-child th:last-child,
+.muffin.table-bordered tbody:last-child tr:last-child td:last-child,
+.muffin.table-bordered tfoot:last-child tr:last-child td:last-child {
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -moz-border-radius-bottomright: 0;
+}
+.muffin.table-bordered caption + thead tr:first-child th:first-child,
+.muffin.table-bordered caption + tbody tr:first-child td:first-child,
+.muffin.table-bordered colgroup + thead tr:first-child th:first-child,
+.muffin.table-bordered colgroup + tbody tr:first-child td:first-child {
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+}
+.muffin.table-bordered caption + thead tr:first-child th:last-child,
+.muffin.table-bordered caption + tbody tr:first-child td:last-child,
+.muffin.table-bordered colgroup + thead tr:first-child th:last-child,
+.muffin.table-bordered colgroup + tbody tr:first-child td:last-child {
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+  -moz-border-radius-topright: 0;
+}

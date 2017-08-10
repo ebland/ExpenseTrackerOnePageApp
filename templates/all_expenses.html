@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block content %}
+ 
+<h2>All Active Expenses</h2>
+  <div page-header>
+    <h4 class="page-header">Manage Expenses </h4>
+</div>
+
+  {% if expenses|length == 0 %}
+
+{% else %}
+
+<div class="field">
+  <a href='/expense_form'><button class="btn btn-primary" type="button">Create New Expense</button></a>
+</div>
+
+{% endif %}
+
+{% if expenses|length == 0 %}
+
+{% else %}
+
+{{ super() }}
+
+<div class="tab_1">
+    <table class="muffin table-striped table-hover margin-bottom0">
+        <thead class="data-list-header">
+        <td class="col due">Expense ID  </td>
+        <td class="col ref">Name</td>
+        <td class="col ref">Location</td>
+        <td class="col name">Description</td>
+        <td class="col total">Amount</td>
+        <td class="col total">Update</td>
+        <td class="col total">Delete</td>
+        </thead>
+        <tbody>
+        {% for product in products %}
+        <tr class="clickable" data-id="{{ product.product_id }}">
+            <td class="col due">{{ expense.expense_id }}"</td>
+            <td class="col due"> <a href="/products/{{ product.product_id }}" class='btn btn-mini btn-primary'>{{ expense.expense_name  }}</a></td>
+            <td class="col ref">{{ expense.description }}</td>
+            <td class="col name"> {{ expense.expense_location }}   <br></td>
+            <td class="col total">{{ expense.amount }}</br></td>
+            <td class="col status">
+
+             <form action="/expense_update_process" method='POST'>
+              <input type="radio" name="status" value="active">Active<br>
+              <input type="radio" name="status" value="quote_sent">Entertainment<br>
+              <input type="radio" name="status" value="quote_requested">Food</br>
+              <input type="radio" name="status" value="invoice_sent">Work<br>
+              <input type="radio" name="status" value="completed">Travel<br>
+              <input type="radio" name="status" value="Closed">Home Maintenance</br>
+              <input name='product_id' value='{{product.product_id }}' hidden>
+              <input type='submit' value='submit'>Submit</br>
+              </form> 
+
+            <td class="col total"><h1> 
+              <a href="/expenses/{{ expense.expense_id }}" class='btn btn-mini btn-primary'>Update</a></h1></br></td>
+            <td class="col total"><h1> <a href="/expense_delete/{{expense.expense_id }}" class='btn btn-mini btn-primary'>Delete</a></h1></br></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endif %}
+ 
+
+{% endblock %}

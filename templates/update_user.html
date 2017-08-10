@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ 
+  <ul class="breadcrumb">
+    <li><a href="/update_user">Update User</a> <span class="divider">/</span></li>
+    <li class="active">User Information</li>
+  </ul>
+
+<script>
+  function submitForm(){
+    document.getElementById("update_user").submit();
+  }
+</script>
+
+  <div class="form-group">
+    <div id="update_user">
+
+        <form id="update_user" action="/update_user_process" method="POST">
+            <div class="form-group">
+              <div id="update_user">
+                  
+                    <div class="header">Instructions: Update all information then select "Update User" button to submit.</div>  
+                    <div class="fields">
+                      <label>First Name</label><br>
+                      <input type="hidden" name="user_id" value="{{user.user_id}}"  >
+                      <input type="text" name="fname" value='{{ user.fname }}' required><br>
+                      <label>Last Name</label><br>
+                      <input type="text" name="lname" value='{{ user.lname }}' required><br>
+                       <label>Email</label>
+                      <input type="text" name="email"  value="{{  user.email  }}" required><br>
+                       <label>Password</label>
+                      <input type="password" name="password"  value="{{  user.password  }}" required><br>  
+                      <label>Phone Number</label><br>
+                      <input type="text" name="phone_number" value='{{ user.phone }}'><br> 
+                      <label>Company</label><br>
+                      <input type="text" name="company" value='{{ user.company }}'><br>  
+                      <label>Address</label><br>
+                      <input type="text" name="address1" value='{{ user.address1 }}'><br>  
+                      <label>Apt/Ste/Lot/Rm Number</label><br>
+                      <input type="text" name="address2" value='{{ user.address2 }}'><br>  
+                      <label>City</label><br>
+                      <input type="text" name="city" value='{{ user.city }}'><br>  
+                      <label>State</label><br>
+                      <input type="text" name="state" value='{{ user.state }}'><br>  
+                      <label>Zip Code</label><br>
+                      <input type="text" name="zipcode" value='{{ user.zip_code }}'><br>  
+                      {{  user.status  }}
+                      {{  user.created_at   }}
+                      {{  user.modified   }}
+                      </div>
+                  <td class="col total"><h1> 
+              <a href="/users/{{ user.user_id }}" class='btn btn-mini btn-primary'>Update</a></h1></br></td>
+            <td class="col total"><h1> <a href="/user_delete/{{user.user_id }}" class='btn btn-mini btn-primary'>Delete</a></h1></br></td>
+                       
+                     <div class="field">
+                        <button class="button normal" value="submitForm" type="submit">Update User</button>
+                         <td class="col total"><h1> <a href="/user_delete/{{user.user_id }}" class='btn btn-mini btn-primary'>Delete</a>
+                     </div>
+
+              </div>
+        </form>
+      </div>
+  </div>
+
+{% endblock %}
